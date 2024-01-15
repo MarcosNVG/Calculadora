@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
+    <!--<header>
+        <div id="cabeçalho">
+            <h1>Calculadora Virtual</h1>
+        </div>
+    </header>-->
+
+    <section>
+        <div id="div-view">
+            <input type="text" id="txtn1" readonly>
+        </div>
+        
+        <div class="area-button">
+
+            <!--botões funcionais-->
+            <div class="btn-action2">
+                <input type="button" value="C" onclick="limpar()" class="buttonlimp limpar button">
+                <input type="button" value="√" onclick= "acoes('raiz')" class="buttonaction raiz button">
+                <input type="button" value="%" onclick= "porcentagem()" class="buttonaction porcentagem button">
+            </div>
+
+            <div class="btn-action">
+                <input type="button" value="+" onclick= "acoes('soma')" class="buttonaction soma button">
+                <input type="button" value="-" onclick= "acoes('diminuir')" class="buttonaction dim button">
+                <input type="button" value="x" onclick= "acoes('multiplicar')" class="buttonaction mult button">
+                <input type="button" value="÷" onclick= "acoes('dividir')" class="buttonaction dividir button">
+            </div>
+            
+            <!--botões numéricos-->
+            <div class="btn-num">
+                <input type="button" value="7" onclick= "add(7)" class="buttonum 7 button">
+                <input type="button" value="8" onclick= "add(8)" class="buttonum 8 button">
+                <input type="button" value="9" onclick= "add(9)" class="buttonum 9 button">
+                <br>
+                <input type="button" value="4" onclick= "add(4)" class="buttonum 4 button">
+                <input type="button" value="5" onclick= "add(5)" class="buttonum 5 button">
+                <input type="button" value="6" onclick= "add(6)" class="buttonum 6 button">
+                <br>
+                <input type="button" value="1" onclick= "add(1)" class="buttonum 1 button">
+                <input type="button" value="2" onclick= "add(2)" class="buttonum 2 button">
+                <input type="button" value="3" onclick= "add(3)" class="buttonum 3 button">
+                <br>
+                <input type="button" value="." onclick= "add('.')" class="buttonum  button">
+                <input type="button" value="0" onclick= "add(0)" class="buttonum 0 button">
+                <input type="button" value="=" onclick="resultado()" class="buttonres res button">
+            </div>
+        </div>
+    </section>
+    <!--<footer>&copy;NVG</footer>-->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -61,7 +61,7 @@ function acoes(sinal){
 }
 
 function porcentagem(){
-    if (action == ''){
+    if (v2 == 0){
         v1 = view.value;
         var s = v1 / 100;
         view.value = s;

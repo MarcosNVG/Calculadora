@@ -52,6 +52,8 @@ function acoes(sinal){
     v1 = view.value
     action = sinal
     view.value = ''
+    ponto = false
+    p = false
 
     if (sinal == 'raiz') {
         var s = Math.sqrt(v1)

@@ -2,16 +2,16 @@ var view = window.document.getElementById('txtn1')
 var v1 = 0
 var v2 = 0
 var s = ''
-var p = false
 var sv = 0
 var pvalor= ''
 var action = ''
+var p = false
 var ponto = false
+var igual = ''
 
 function add(valor){
-    if (view.value == s) {
-        limpar()    
-        s = ''
+    if (igual == 1) {
+        limpar()
     }
 
     /* Estrutura para verificar o primeiro valor adicionado */
@@ -51,7 +51,7 @@ function add(valor){
 function acoes(sinal){
     v1 = view.value
     action = sinal
-    limpar()
+    view.value = ''
 
     if (sinal == 'raiz') {
         var s = Math.sqrt(v1)
@@ -61,7 +61,7 @@ function acoes(sinal){
 }
 
 function porcentagem(){
-    if (v2 == 0){
+    if (action == ''){
         v1 = view.value;
         var s = v1 / 100;
         view.value = s;
@@ -86,16 +86,22 @@ function porcentagem(){
 
 function limpar(){
     view.value = ''
-    ponto = false
-    p = false
-    
+    v1 = 0
+    v2 = 0
+    s = ''
     sv = 0
+    pvalor= ''
+    action = ''
+    igual = ''
+    p = false
+    ponto = false
 }
 
 function resultado(){
+    igual = 1
     v2 = view.value
 
-    limpar ()
+    view.value = ''
 
     if (action == 'soma') {
         s = Number(v1) + Number(v2)
@@ -109,3 +115,15 @@ function resultado(){
 
     view.value = s
 }
+
+
+
+/*
+function limpar(){
+    view.value = ''
+    ponto = false
+    p = false
+    
+    sv = 0
+}
+ */
